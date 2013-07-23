@@ -2,102 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>MyCastle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="(min-width: 980px)" href="css/main-desktop.css">
+    <link rel="stylesheet" media="(max-width: 480px)" href="css/main-mobile.css">
+
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="bootstrap/js/jquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
           rel="stylesheet" type="text/css">
-    <style type="text/css">
+    <style>
+    @media (min-width: 980px) {
+    	body{
+		   padding-top: 60px;
+		}
+		.linediv-l {
+		   border-right: 1px white solid;
+		}
+		.linediv-r {
+		   border-left: 1px white solid;
+		}
+    }
 
-      /* Large desktop */
-      @media (min-width: 980px) {
-        body {
-         padding-top: 60px;
-        }
-       .linediv-l {
-         border-right: 1px white solid;
-        }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
-      }
+    @media (max-width: 480px) {
+	    .copy {
+		  padding: 2.5% 10%;
+		}
+		.linediv-l {
+		  border-bottom: 1px white solid;
+		}
+		.linediv-r {
+		  border-top: 1px white solid;
+		}
+    }
 
-      /* Landscape phones and down */
-      @media (max-width: 480px) {
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-      }
+    body{
+	  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	}
+	.heading, .subheading {
+	  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	  text-align: center;
+	}
+	p.lead {
+	  padding-top: 1.5%;
+	  font-size: 24px;
+	  line-height: 30px;
+	}
+	p {
+	  font-size: 18px;
+	  line-height: 24px;
+	}
 
-      /* All form factors */
+	/* Video pitch and Action */
+	.pitch {
+	  padding: 2.5% 0%;
+	}
+	.order {
+	  padding: 2% 0%;
+	}
+	.actions {
+	  background-color: #343434;
+	  padding: 3% 0%;
+	}
+	.video, .thermometer, .order, .social, .statistics {
+	  text-align: center;
+	}
+	.statistics h3, .statistics p {
+	  color: white;
+	}
 
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
+	/* Marketing Copy and Footer */
+	.copy {
+	  padding-top: 2.5%;
+	  padding-bottom: 2.5%;
+	  text-align: justify;
+	}
+	.asset {
+	  padding: 2.5% 0%;
+	}
+	.footer {
+	  color: #cccccc;
+	  text-align: center;
+	}
+	.footer p {
+	  font-size: 11px;
+	}
+	.footer a {
+	  color: #ccccff;
+	}
+</style>
 
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
-
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
-    </style>
   </head>
   <body>
 
@@ -112,7 +111,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">MyCastle</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -133,19 +132,19 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1>MyCastle</h1>
         </div>
       </div>
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
+          <p class="lead">You will found all solutions to make your house as great as castle</p>
         </div>
       </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="http://mycastle.com.ua/img/img_1.jpg">
         </div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
@@ -200,21 +199,21 @@
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="http://mycastle.com.ua/img/img_2.jpg">
         </div>
         <div class="span5 copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            What is American dream? Your own house as huge as castle.
+            And this great dream must be perfect so perfect must be your house. The main questions are.
+            How do use choose it?
+            Where do you find it?
+            How do you want it will look like?
+            What do you want from it?
+            The answers can be different.
+            It must be in a safe place.
+            At the same time it have to have entertainment somewhere near.
+            Someowe will be glad to have school near from house.
+			But just tell to the system what you want and it will find perfect soution for you.
           </p>
         </div>
       </div>
@@ -222,21 +221,13 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            "MyCastle" wil help you to find the house.
+            It is used GIS abilities to make desicion of out what real estate is most suituble for you.
+			So be carefull with your wishes they will become true.
           </p>
         </div>
         <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="http://mycastle.com.ua/img/img_3.jpg">
         </div>
       </div>
 
@@ -251,12 +242,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
+                    What is "MyCastle" for?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Frequently Asked Question.
+                    "MyCastle" is service for finding real estate according to your preferences of your desired lifespace.
                   </div>
                 </div>
               </div>
@@ -264,12 +255,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
+                    Is it system free for real estate customers?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    A question which is commonly asked by users.
+                    Yes it is free for customers.
                   </div>
                 </div>
               </div>
@@ -292,3 +283,4 @@
     </div>
   </body>
 </html>
+
